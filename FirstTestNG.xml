@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UnderstandingBaseExecution">
+    <test name="BaseExecution">
+        <classes>
+            <class name="testpackage.UsingBaseAnnotation">
+                <methods>
+                    <include name="testMethod"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

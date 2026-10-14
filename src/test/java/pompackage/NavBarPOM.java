@@ -24,7 +24,17 @@ public class NavBarPOM
         PageFactory.initElements(driver,this);
     }
 
+    public WebElement getMenuIcon() {
+        return menuIcon;
+    }
 
+    public WebElement getCartIcon() {
+        return cartIcon;
+    }
+
+    public WebElement getAddedElementNumberContainer() {
+        return addedElementNumberContainer;
+    }
 
     public void clickOnMenuIcon()
     {

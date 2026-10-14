@@ -67,6 +67,11 @@ public class BrowserUtility
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
     }
 
+    public String getURL()
+    {
+        return getDriver().getCurrentUrl();
+    }
+
     public void closeBrowser()
     {
         if (getDriver()!=null)

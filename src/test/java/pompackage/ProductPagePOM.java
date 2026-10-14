@@ -19,4 +19,8 @@ public class ProductPagePOM
     {
         addToCartButton.click();
     }
+
+    public WebElement getAddToCartButton() {
+        return addToCartButton;
+    }
 }

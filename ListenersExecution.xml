@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Executing Listeners">
+    
+    <listeners>
+        <listener class-name="listenerspackage.EndToEndCustomListener"></listener>
+    </listeners>
+    
+    <test name="Executing Listeners Implementation">
+        <classes>
+            <class name="testpackage.AddingDesiredItemToCart">
+                <methods>
+                    <include name="selectDesiredProduct"/>
+                    <include name="addProductToCart"/>
+                    <include name="goToCartPage"/>
+                    <include name="continuePurchasing"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

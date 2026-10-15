@@ -1,16 +1,20 @@
 package testpackage;
 
 import basepackage.AddingDesiredItemBaseClass;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class AddingDesiredItemToCart extends AddingDesiredItemBaseClass
 {
+    public WebDriver driver;
 
     @Test
     public void selectDesiredProduct()
     {
+        this.driver = browserUtil.getDriver();
+
         Assert.assertEquals(browserUtil.getURL(),"https://www.saucedemo.com/inventory.html","Inventory Page is not opened");
         Reporter.log("The Inventory Page is opened",true);
 
@@ -25,7 +29,7 @@ public class AddingDesiredItemToCart extends AddingDesiredItemBaseClass
         Assert.assertTrue(browserUtil.getURL().contains("-item"),"The Product Page  has bug");
         Reporter.log("The URL contains of 'Item KeyWord'",true);
 
-        Assert.assertTrue(product.getAddToCartButton().isDisplayed(),"The cart Button is not displayed");
+        Assert.assertFalse(product.getAddToCartButton().isDisplayed(),"The cart Button is not displayed");
         Reporter.log("The Add-To-Cart Button is displayed",true);
 
         product.clickOnAddToCartButton();

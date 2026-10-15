@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BatchExecution">
+    <test verbose="2" preserve-order="true" name="Executing Batch Executing">
+        <classes>
+            <class name="testpackage.AddingDesiredItemToCart">
+                <methods>
+                    <include name="selectDesiredProduct"/>
+                    <include name="addProductToCart"/>
+                    <include name="goToCartPage"/>
+                    <include name="continuePurchasing"/>
+                </methods>
+            </class>
+            <class name="testpackage.AddingDesiredItemUsingSoftAssertion">
+                <methods>
+                    <include name="purchaseDesiredItem"/>
+                </methods>
+            </class>
+            <class name="testpackage.UndersatndingDependsOnMethods">
+                <methods>
+                    <include name="logIn"/>
+                    <include name="searchProduct"/>
+                    <include name="addProductToCart"/>
+                    <include name="goToCart"/>
+                    <include name="changeQuantity"/>
+                    <include name="purchaseProduct"/>
+                </methods>
+            </class>
+            <class name="testpackage.UnderstandingInvocationCount">
+                <methods>
+                    <include name="testMethod"/>
+                </methods>
+            </class>
+            <class name="testpackage.UnderstandingPriority">
+                <methods>
+                    <include name="logIn"/>
+                    <include name="friendRequest"/>
+                    <include name="getNotification"/>
+                </methods>
+            </class>
+            <class name="testpackage.UsingBaseAnnotation">
+                <methods>
+                    <include name="testMethod"/>
+                </methods>
+            </class>
+            <class name="testpackage.UsingDataProvider">
+                <methods>
+                    <include name="actionMethod"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

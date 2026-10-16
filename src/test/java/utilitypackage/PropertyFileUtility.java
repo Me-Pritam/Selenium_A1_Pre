@@ -3,9 +3,9 @@ package utilitypackage;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class PropertyFileUtiltiy
+public class PropertyFileUtility
 {
-    public static String getData(String key) throws Exception
+    public  String getData(String key) throws Exception
     {
         FileInputStream fis = new FileInputStream("./src/test/resources/CommonDataFolder/Config.properties");
 

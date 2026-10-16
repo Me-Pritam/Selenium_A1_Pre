@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="methods" thread-count="2" name="Prallel_Execution">
+    <test name="Prallel_Method_Execution">
+        <classes>
+            <class name="testpackage.ParallelMethodAddBagAndLightToCart"/>
+        </classes>
+    </test>
+</suite>

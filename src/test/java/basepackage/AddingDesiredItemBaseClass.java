@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeTest;
 import pompackage.*;
 import utilitypackage.ActionsUtility;
 import utilitypackage.BrowserUtility;
-import utilitypackage.PropertyFileUtiltiy;
+import utilitypackage.PropertyFileUtility;
 
 public class AddingDesiredItemBaseClass
 {
@@ -18,6 +18,7 @@ public class AddingDesiredItemBaseClass
 
     public BrowserUtility browserUtil;
     public ActionsUtility action;
+    public PropertyFileUtility propertyFileUtility;
 
     public WebDriver driver;
 
@@ -32,11 +33,13 @@ public class AddingDesiredItemBaseClass
     {
         try
         {
-            browser = PropertyFileUtiltiy.getData("browser");
-            url = PropertyFileUtiltiy.getData("url");
-            username = PropertyFileUtiltiy.getData("username");
-            password = PropertyFileUtiltiy.getData("password");
-            desiredProduct = PropertyFileUtiltiy.getData("desiredProduct");
+            propertyFileUtility = new PropertyFileUtility();
+
+            browser = propertyFileUtility.getData("browser");
+            url = propertyFileUtility.getData("url");
+            username = propertyFileUtility.getData("username");
+            password = propertyFileUtility.getData("password");
+            desiredProduct = propertyFileUtility.getData("desiredProduct");
         }
         catch (Exception e) {
             e.printStackTrace();

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="ParallelExecution">
+    <test name="ParallelClassExecutor">
+        <classes>
+            <class name="testpackage.ParallelClass1">
+                <methods>
+                    <include name="openBrowser"/>
+                    <include name="loadAllPages"/>
+                    <include name="doLogIn"/>
+                    <include name="doLogOut"/>
+                </methods>
+            </class>
+            <class name="testpackage.ParallelClass2">
+                <methods>
+                    <include name="openBrowser"/>
+                    <include name="loadAllPages"/>
+                    <include name="doLogIn"/>
+                    <include name="selectProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

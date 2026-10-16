@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="All Test Suite">
+    <test name="chromeexecutor">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testpackage.CrossBrowserExecution">
+                <methods>
+                    <include name="chooseBrowser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="edgeexecutor">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="testpackage.CrossBrowserExecution">
+                <methods>
+                    <include name="chooseBrowser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="firefoxexecutor">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="testpackage.CrossBrowserExecution">
+                <methods>
+                    <include name="chooseBrowser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

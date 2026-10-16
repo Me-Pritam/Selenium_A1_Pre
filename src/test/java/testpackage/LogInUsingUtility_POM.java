@@ -7,7 +7,7 @@ import pompackage.NavBarPOM;
 import pompackage.ProductPagePOM;
 import utilitypackage.ActionsUtility;
 import utilitypackage.BrowserUtility;
-import utilitypackage.PropertyFileUtiltiy;
+import utilitypackage.PropertyFileUtility;
 
 public class LogInUsingUtility_POM
 {
@@ -19,6 +19,7 @@ public class LogInUsingUtility_POM
 
     public static BrowserUtility browserUtils;
     public static ActionsUtility actionsUtils;
+    public static PropertyFileUtility propertyFileUtility;
 
     public static LogInPagePOM login;
     public static NavBarPOM navBar;
@@ -31,11 +32,13 @@ public class LogInUsingUtility_POM
 
         try
         {
-          browser = PropertyFileUtiltiy.getData("browser");
-          url = PropertyFileUtiltiy.getData("url");
-          username = PropertyFileUtiltiy.getData("username");
-          password = PropertyFileUtiltiy.getData("password");
-          desiredProduct = PropertyFileUtiltiy.getData("desiredProduct");
+            propertyFileUtility = new PropertyFileUtility();
+
+          browser = propertyFileUtility.getData("browser");
+          url = propertyFileUtility.getData("url");
+          username = propertyFileUtility.getData("username");
+          password = propertyFileUtility.getData("password");
+          desiredProduct = propertyFileUtility.getData("desiredProduct");
 
           browserUtils = new BrowserUtility();
 

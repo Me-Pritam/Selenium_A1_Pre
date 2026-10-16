@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utilitypackage.ActionsUtility;
 import utilitypackage.BrowserUtility;
-import utilitypackage.PropertyFileUtiltiy;
+import utilitypackage.PropertyFileUtility;
 
 public class LogInUsingUtility
 {
@@ -18,15 +18,18 @@ public class LogInUsingUtility
 
     public static BrowserUtility browserUtils;
     public static ActionsUtility actions;
+    public static  PropertyFileUtility propertyFileUtility;
 
     public static void main(String[] args) {
 
         try
         {
-           browser = PropertyFileUtiltiy.getData("browser");
-           url = PropertyFileUtiltiy.getData("url");
-           username = PropertyFileUtiltiy.getData("username");
-           password = PropertyFileUtiltiy.getData("password");
+            propertyFileUtility = new PropertyFileUtility();
+
+           browser = propertyFileUtility.getData("browser");
+           url = propertyFileUtility.getData("url");
+           username = propertyFileUtility.getData("username");
+           password = propertyFileUtility.getData("password");
 
            browserUtils = new BrowserUtility();
 
